@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>정훈쌤 시사상식 퀴즈 10문제 (2026년 10월)</title>
+<style>
+:root{--bg:#f5f7fa;--card:#fff;--ink:#1d2733;--sub:#5d6b7c;--line:#d8dfe8;--navy:#1f3a5f;--on:#fff;--ok:#1b7f4b;--okbg:#e5f4ec;--no:#b3261e;--nobg:#fbe9e7;--sel:#e8eef7;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10161d;--card:#18212b;--ink:#e8edf3;--sub:#9aa8b8;--line:#2a3643;--navy:#8fb2e6;--on:#10161d;--ok:#6fd49b;--okbg:#14301f;--no:#ff8a80;--nobg:#3a1c1a;--sel:#223246}}
+:root[data-theme="dark"]{--bg:#10161d;--card:#18212b;--ink:#e8edf3;--sub:#9aa8b8;--line:#2a3643;--navy:#8fb2e6;--on:#10161d;--ok:#6fd49b;--okbg:#14301f;--no:#ff8a80;--nobg:#3a1c1a;--sel:#223246}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.6;font-size:16px}
+main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.6rem;line-height:1.3;margin:8px 0 6px;color:var(--navy)}
+h2{font-size:1.15rem;line-height:1.5;margin:0 0 14px}
+p{margin:0 0 12px}.sub{color:var(--sub);font-size:.92rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.bar{height:6px;background:var(--line);border-radius:3px;margin:0 0 14px;overflow:hidden}.bar i{display:block;height:100%;background:var(--navy);transition:width .25s}
+.meta{display:flex;justify-content:space-between;color:var(--sub);font-size:.88rem;margin-bottom:6px}
+.cat{display:inline-block;font-size:.78rem;border:1px solid var(--navy);color:var(--navy);border-radius:9px;padding:0 8px;margin-right:6px}
+.opt{display:flex;gap:10px;width:100%;text-align:left;font:inherit;color:inherit;background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;margin:0 0 9px;cursor:pointer}
+.opt:hover:not(:disabled){background:var(--sel)}
+.opt:focus-visible,.btn:focus-visible,input:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.opt b{min-width:1.3em;color:var(--navy)}
+.opt.sel{border-color:var(--navy);background:var(--sel)}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.no{border-color:var(--no);background:var(--nobg)}
+.opt:disabled{cursor:default;color:inherit}
+.exp{margin-top:6px;padding:12px 14px;border-radius:10px;background:var(--sel);font-size:.95rem}
+.btn{font:inherit;font-weight:700;border:0;border-radius:10px;padding:12px 18px;cursor:pointer;background:var(--navy);color:var(--on)}
+.btn.alt{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
+.btn:disabled{opacity:.4;cursor:default}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+input{font:inherit;width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);margin:6px 0 14px}
+.score{font-size:2.6rem;font-weight:800;color:var(--navy);line-height:1.1}
+.rv{border-left:4px solid var(--no);padding:2px 0 2px 12px;margin:0 0 18px}
+.rv.good{border-color:var(--ok)}
+.tag{font-weight:700}.tag.o{color:var(--ok)}.tag.x{color:var(--no)}
+[hidden]{display:none!important}
+.qn{font-weight:700;color:var(--navy);margin-right:6px}.qc{margin:0 0 14px}.sum{position:relative}.pill{font-size:.9rem;color:var(--sub);align-self:center}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+var Q=[
+{c:"경제",q:"다음 중 사이드카와 서킷브레이커의 차이를 바르게 설명한 것은?",o:["사이드카는 지수가 일정 폭 이상 급락하면 거래를 중단하고, 서킷브레이커는 프로그램 매매를 잠시 제한한다","사이드카는 프로그램 매매 급증으로 시장이 과도하게 흔들릴 때 매매를 잠시 제한하고, 서킷브레이커는 지수가 일정 폭 이상 급락하면 거래를 중단한다","둘 다 거래를 중단하지만 사이드카는 개인 투자자에게만 적용된다","사이드카는 외국인 매도를 금지하고, 서킷브레이커는 환율 급변 때 외환 거래를 중단한다"],a:1,e:"사이드카는 프로그램 매매 급증 때 매매를 잠시 제한하는 장치이고, 서킷브레이커는 지수가 일정 폭 이상 급락하면 거래를 중단하는 제도입니다. 서킷브레이커가 더 강한 조치입니다."},
+{c:"경제",q:"3분기 GDP는 성장했지만 민간소비는 감소했다. 수출 주도 성장이 고용과 가계소득으로 이어지지 않을 때 심화될 수 있는 구조는?",o:["물가 하락과 고용 증가가 함께 나타나는 디플레이션 구조","내수 호조와 수출 부진이 공존하는 구조","재정 흑자와 가계소득 증가가 겹치는 구조","무역 흑자 확대와 내수 침체가 공존하는 이중 구조"],a:3,e:"수출과 투자가 성장을 이끌어도 고용과 가계소득으로 이어지지 않으면 무역 흑자 확대와 내수 침체가 공존하는 이중 구조가 심화될 수 있습니다."},
+{c:"경제",q:"국제유가 상승이 한국 경제에 미치는 영향의 경로로 가장 적절한 것은?",o:["수입 비용과 운송·생산비 상승 → 소비자물가 압력 → 금리 인하 기대 약화","수출 단가 하락 → 소비자물가 안정 → 금리 인하 기대 강화","원유 수입 감소 → 무역수지 개선 → 물가 하락","전략비축유 증가 → 공급 확대 → 유가 하락"],a:0,e:"한국은 원유 수입 의존도가 높아 유가 상승이 수입비용, 물가, 환율, 기업 비용으로 이어집니다. 물가를 다시 끌어올리면 금리 인하 기대도 약해질 수 있습니다."},
+{c:"경제",q:"세수 호조로 초과 세수가 생겼다. 이에 대한 평가로 가장 적절한 것은?",o:["재정 여력이 생겼으므로 지출 확대가 곧 정답이다","세수 호조는 법인세와 무관하며 반도체 경기와도 관련이 없다","재정 여력은 넓어지지만 부채 상환·복지·투자·물가 대응 사이에서 우선순위를 정해야 한다","초과 세수는 국가부채를 자동으로 줄여주므로 별도 판단이 필요 없다"],a:2,e:"세수 호조는 재정 여력을 넓히지만 곧 무조건적인 지출 확대를 뜻하지 않습니다. 부채 관리와 미래 세대 부담을 함께 고려해 우선순위를 정해야 합니다."},
+{c:"국제",q:"미국 중간선거 결과가 한국 경제에도 영향을 줄 수 있는 이유로 가장 적절한 것은?",o:["한국 국회의 다수당 구도가 함께 바뀌기 때문","대통령의 정책 추진력과 의회 다수당 구도가 바뀌면 관세·통상·기후·대중국 정책이 달라질 수 있기 때문","선거 직후 한국의 기준금리가 자동으로 조정되기 때문","미국 대통령이 교체되어 한미 간 통상 협정이 종료되기 때문"],a:1,e:"중간선거는 대통령의 정책 추진력과 의회 다수당 구도를 바꾸는 선거입니다. 결과에 따라 관세, 통상, 기후, 대중국 정책이 달라질 수 있어 한국 경제에 영향을 줍니다."},
+{c:"외교·안보",q:"대북 제재를 둘러싼 논쟁의 핵심으로 가장 적절한 것은?",o:["제재가 국제법상 허용되는지 여부","제재 기간을 몇 년으로 정할지","제재 대상 품목을 몇 개로 늘릴지","제재 강화가 도발 억제에 효과를 낼지, 대화 채널을 막아 긴장만 키울지"],a:3,e:"제재는 북한의 핵·미사일 자금과 물자를 차단하려는 조치이지만, 도발 억제 효과와 긴장 심화 가능성을 두고 논쟁이 있습니다. 그래서 억지와 대화의 균형이 필요합니다."},
+{c:"사회",q:"대규모 주택 공급지가 주거 기능만 있는 ‘베드타운’이 되지 않으려면 함께 갖춰져야 할 것으로 가장 적절한 것은?",o:["광역교통망, 일자리, 학교·병원 같은 생활 SOC","분양가 인하와 대출 규제 완화","신도시 이름 변경과 홍보 강화","서울 도심 재건축 물량 확대"],a:0,e:"공급지가 교통·일자리·교육 인프라와 연결되지 않으면 단순한 베드타운이 될 수 있습니다. 광역교통망, 일자리, 생활 SOC가 함께 갖춰져야 수도권 집중 완화 효과가 납니다."},
+{c:"체육",q:"우천 등으로 경기가 중단됐을 때, 다음 날 중단된 시점부터 이어서 진행하는 제도는?",o:["콜드게임","노게임","서스펜디드 게임","더블헤더"],a:2,e:"서스펜디드 게임은 중단된 시점부터 다음 날 이어서 진행하는 제도입니다. 콜드게임은 중단 시점에 경기를 끝내는 것이고, 노게임은 경기를 무효로 하는 것입니다."},
+{c:"체육",q:"패러스포츠 보도에서 메달 수와 함께 다뤄야 한다고 본 요소로 가장 적절한 것은?",o:["선수 연봉과 광고 수익","훈련 환경, 장애인 체육 인프라, 사회적 접근성과 인식 개선","경기 일정과 상대 전적","국가별 메달 순위와 포상금"],a:1,e:"패러스포츠는 기록만이 아니라 선수의 훈련 환경, 장애인 체육 인프라, 접근성과 사회적 인식 개선의 문제이기도 합니다. 패러탁구는 장애 유형과 정도에 따른 분류 체계로 공정한 경쟁을 만듭니다."},
+{c:"문화",q:"문화예술진흥법 개편으로 예술산업 육성을 추진할 때 제기되는 핵심 쟁점은?",o:["공공성을 지키기 위해 예술의 상업적 유통을 전면 제한해야 하는지","AI 활용을 예술 지원 대상에서 제외해야 하는지","지식재산권 보호를 폐지해야 하는지","산업화 지원이 창작의 자율성과 다양성을 해치지 않는지, 수익이 창작자에게 공정하게 돌아가는지"],a:3,e:"예술산업 육성은 일자리와 수익을 만들 수 있지만, 상업성만 강조하면 창작의 다양성이 줄 수 있습니다. 지식재산권 보호와 공정한 수익 배분이 함께 마련돼야 합니다."}
+];
+
+var app=document.getElementById("app"),A=[],G=false,W=false;
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;"}[c]})}
+function qh(k){var q=Q[k],a=A[k],h='<div class="card qc" data-k="'+k+'"'+(G&&W&&a===q.a?' hidden':'')+'><h2><span class="qn">Q'+(k+1)+'.</span><span class="cat">'+q.c+'</span>'+esc(q.q)+'</h2>';
+ q.o.forEach(function(t,j){var c="opt";
+  if(G){if(j===q.a)c+=" ok";else if(j===a)c+=" no"}else if(a===j)c+=" sel";
+  h+='<button class="'+c+'" data-k="'+k+'" data-j="'+j+'"'+(G?' disabled':'')+'><b>'+(j+1)+'</b><span>'+esc(t)+'</span></button>'});
+ if(G)h+='<div class="exp"><span class="tag '+(a===q.a?'o':'x')+'">'+(a===q.a?'정답입니다':(a===undefined?'미응답 · 정답은 '+(q.a+1)+'번':'오답입니다 · 정답은 '+(q.a+1)+'번'))+'</span><br>'+esc(q.e)+'</div>';
+ return h+'</div>'}
+function draw(){
+ var ok=0;Q.forEach(function(q,k){if(A[k]===q.a)ok++});
+ var h='<h1>정훈쌤 시사상식 퀴즈</h1><p class="sub">2026년 10월 학습자료 기반 · 객관식 10문제 · 난이도 상 · 개념의 차이와 원리를 이해해야 풀 수 있어요</p>';
+ if(G)h+='<div class="card sum" style="margin-bottom:14px"><div class="score">'+ok+' / '+Q.length+'</div><p class="sub" style="margin:4px 0 0">'+(ok===Q.length?'모두 맞혔어요!':(Q.length-ok)+'문제를 다시 확인해 보세요.')+'</p><div class="row">'+(ok<Q.length?'<button class="btn" id="wr">'+(W?'전체 문제 보기':'오답만 보기')+'</button>':'')+'<button class="btn alt" id="rs">다시 풀기</button></div></div>';
+ Q.forEach(function(_,k){h+=qh(k)});
+ if(!G)h+='<div class="row"><button class="btn" id="gr">채점하기</button><span class="pill" id="cnt"></span></div>';
+ app.innerHTML=h;cnt();
+ Array.prototype.forEach.call(app.querySelectorAll(".opt"),function(b){b.onclick=function(){if(G)return;var k=+b.dataset.k,j=+b.dataset.j;A[k]=j;
+  Array.prototype.forEach.call(app.querySelectorAll('.opt[data-k="'+k+'"]'),function(x){x.classList.toggle("sel",+x.dataset.j===j)});cnt()}});
+ var g=document.getElementById("gr");if(g)g.onclick=function(){var n=Q.filter(function(_,k){return A[k]===undefined}).length;
+  if(n&&!confirm("아직 답하지 않은 문제가 "+n+"개 있어요. 그래도 채점할까요?"))return;G=true;W=false;draw();window.scrollTo(0,0)};
+ var r=document.getElementById("rs");if(r)r.onclick=function(){A=[];G=false;W=false;draw();window.scrollTo(0,0)};
+ var w=document.getElementById("wr");if(w)w.onclick=function(){W=!W;draw();window.scrollTo(0,0)};
+}
+function cnt(){var c=document.getElementById("cnt");if(c)c.textContent="답변 "+A.filter(function(x){return x!==undefined}).length+" / "+Q.length}
+draw();
+</script>
+</body>
+</html>
